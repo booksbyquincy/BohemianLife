@@ -1,34 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bohemian Life</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Bohemian Life</h1>
-      <p class="tagline">Handcrafted bohemian-inspired goods made to bring warmth and personality into everyday spaces.</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bohemian Life</title>
+  <meta
+    name="description"
+    content="Bohemian Life - bold, colourful style with a tropical, artistic spirit."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">Bohemian Life</a>
+      <nav class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#featured">Featured</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="featured-product" aria-labelledby="featured-title">
-        <h2 id="featured-title">Featured Product</h2>
-        <article class="product-card">
-          <div class="product-image" role="img" aria-label="Woven macramé wall hanging"></div>
-          <div class="product-content">
-            <h3>Sunrise Macramé Wall Hanging</h3>
-            <p>
-              Add texture and a natural, calming touch to your home with this hand-knotted macramé wall hanging crafted from soft cotton cord.
-            </p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Bold style. Free spirit. Island colour.</p>
+          <h1>Wear the energy of Bohemian Life.</h1>
+          <p class="hero-copy">
+            A vibrant, expressive brand inspired by colour, sunlight, movement,
+            and creative living.
+          </p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+            <a href="#about" class="btn btn-secondary">Our Story</a>
           </div>
-        </article>
-      </section>
+        </div>
 
-      <section class="cta-section">
-        <button type="button" class="coming-soon-btn">Shop Coming Soon</button>
-      </section>
-    </main>
-  </body>
+        <div class="hero-art">
+          <div class="logo-wrap">
+            <img src="images/logo.png" alt="Bohemian Life logo" class="hero-logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section light-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-purple">Featured</p>
+          <h2>Colourful pieces with a creative soul</h2>
+          <p>
+            Start with a few featured collections and swap these out later for
+            real products.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-image placeholder one"></div>
+            <h3>Statement Tees</h3>
+            <p>Easy, expressive pieces designed to stand out.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-image placeholder two"></div>
+            <h3>Boho Accessories</h3>
+            <p>Playful accents inspired by colour, texture, and movement.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-image placeholder three"></div>
+            <h3>Sunlit Styles</h3>
+            <p>Warm, bright looks with a laid-back tropical feel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About Bohemian Life</p>
+          <h2>Built around colour, confidence, and creative freedom</h2>
+        </div>
+        <div>
+          <p>
+            Bohemian Life is a brand shaped by bold colour, artistic energy, and
+            a love of expressive style. The look draws from sunlight, nature,
+            movement, and a spirit that feels both free and grounded.
+          </p>
+          <p>
+            This space can grow into a shop, a brand home, and a place where
+            people connect with the mood and message behind what you create.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section shop-preview">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-purple">Shop</p>
+          <h2>Start simple, then expand</h2>
+          <p>
+            This section can later become product listings, a Shopify link, or a
+            storefront connected to your own domain.
+          </p>
+        </div>
+
+        <div class="shop-box">
+          <h3>Your shop is coming to life</h3>
+          <p>
+            For now, this homepage gives your brand a strong visual identity.
+            Next we can add product cards, pricing, links, and your actual store
+            structure.
+          </p>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Bohemian Life</h3>
+        <p>Creative, colourful, and unapologetically vibrant.</p>
+      </div>
+      <div>
+        <p>Email: hello@bohemianlife.com</p>
+        <p>Instagram: @bohemianlife</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
