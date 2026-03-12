@@ -238,6 +238,17 @@ a {
   box-shadow: var(--shadow);
 }
 
+
+.featured-drop-card {
+  text-align: center;
+}
+
+
+.featured-drop-card .card-image {
+  height: auto;
+  min-height: 220px;
+}
+
 .card-image {
   height: 220px;
   border-radius: 18px;
@@ -254,6 +265,30 @@ a {
 
 .placeholder.three {
   background: linear-gradient(135deg, var(--turquoise), var(--purple));
+}
+
+
+.featured-drop-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2eb;
+  padding: 1.2rem;
+}
+
+.featured-drop-image {
+  width: min(100%, 460px);
+  aspect-ratio: 18 / 5;
+  object-fit: contain;
+}
+
+.drop-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--purple-dark);
 }
 
 .about-section {
@@ -375,9 +410,6 @@ a {
     font-size: 2.5rem;
   }
 
-  .card-image {
-    height: 180px;
-  }
 
   .section {
     padding: 4rem 0;
