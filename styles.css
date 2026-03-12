@@ -238,6 +238,11 @@ a {
   box-shadow: var(--shadow);
 }
 
+.statement-tees-card,
+.featured-book-card {
+  text-align: center;
+}
+
 
 .featured-drop-card {
   text-align: center;
@@ -257,6 +262,19 @@ a {
 
 .placeholder.one {
   background: linear-gradient(135deg, var(--purple), var(--lime));
+}
+
+.statement-tees-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-text {
+  color: var(--white);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  letter-spacing: 0.08em;
 }
 
 .placeholder.two {
