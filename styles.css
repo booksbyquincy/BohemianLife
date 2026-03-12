@@ -282,6 +282,45 @@ a {
   object-fit: contain;
 }
 
+.color-options-label {
+  margin: 1rem 0 0.45rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--purple-dark);
+}
+
+.sticker-color-options {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.sticker-color-option {
+  border: 1px solid rgba(106, 76, 163, 0.28);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--text-dark);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.sticker-color-option:hover {
+  border-color: var(--purple);
+}
+
+.sticker-color-option.is-selected {
+  border-color: var(--purple-dark);
+  background: var(--purple-dark);
+  color: var(--white);
+}
+
 .featured-book-media {
   display: flex;
   align-items: center;
