@@ -1,0 +1,122 @@
+:root {
+  --background: #f8f5f1;
+  --surface: #ffffff;
+  --primary: #3f5a4f;
+  --accent: #c9835f;
+  --text-main: #2d2a26;
+  --text-muted: #6e665d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #f7f2eb 0%, var(--background) 100%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.site-header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.03em;
+  color: var(--primary);
+}
+
+.tagline {
+  margin: 0.9rem auto 0;
+  max-width: 42rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+main {
+  width: min(92%, 900px);
+  margin: 0 auto 3rem;
+}
+
+.featured-product {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(46, 39, 32, 0.08);
+}
+
+.featured-product h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.product-card {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.product-image {
+  border-radius: 12px;
+  min-height: 210px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 50%),
+    linear-gradient(135deg, #d7bda7, #bd8b6b);
+}
+
+.product-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.product-content p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+.coming-soon-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.coming-soon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(201, 131, 95, 0.3);
+  background: #b86e4c;
+}
+
+.coming-soon-btn:focus-visible {
+  outline: 3px solid rgba(63, 90, 79, 0.35);
+  outline-offset: 2px;
+}
+
+@media (min-width: 700px) {
+  .featured-product {
+    padding: 2rem;
+  }
+
+  .product-card {
+    grid-template-columns: 1fr 1.25fr;
+    align-items: center;
+  }
+
+  .product-image {
+    min-height: 260px;
+  }
+}
