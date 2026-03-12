@@ -282,6 +282,21 @@ a {
   object-fit: contain;
 }
 
+.featured-book-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2eb;
+  padding: 1rem;
+}
+
+.featured-book-image {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .drop-label {
   margin: 0 0 0.4rem;
   font-size: 0.72rem;
