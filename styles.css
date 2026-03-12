@@ -6,6 +6,7 @@
   --turquoise: #63c7d9;
   --cream: #faf6ef;
   --soft-lavender: #f1ecfb;
+  --aimees-magenta: #f4369d;
   --text-dark: #2f2342;
   --white: #ffffff;
   --shadow: 0 12px 30px rgba(47, 35, 66, 0.14);
@@ -191,18 +192,25 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
+.hero-art {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-wrap {
+  width: min(100%, 520px);
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border-radius: 34px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 30px;
-  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: var(--shadow);
 }
 
 .hero-logo {
   width: 100%;
-  max-width: 560px;
+  max-width: 430px;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .section {
@@ -393,6 +401,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: 1.5rem;
   height: 100%;
 }
@@ -400,7 +409,11 @@ a {
 .about-text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.9rem;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-content p {
@@ -411,7 +424,15 @@ a {
   font-family: "Poppins", "Inter", "Montserrat", Arial, sans-serif;
   font-size: clamp(1.45rem, 1.8vw, 2rem);
   line-height: 1.2;
-  white-space: nowrap;
+}
+
+.about-text .eyebrow {
+  color: var(--aimees-magenta);
+  background: rgba(244, 54, 157, 0.12);
+}
+
+.about-text p {
+  max-width: 66ch;
 }
 
 .about-logo {
