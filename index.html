@@ -70,11 +70,15 @@
 
           <article class="card featured-drop-card">
             <div class="card-image featured-drop-media">
-              <img src="images/BLgreen.png" alt="Bohemian Life transfer sticker" class="featured-drop-image" />
+              <img src="images/BLgreen.png" alt="Bohemian Life transfer sticker" class="featured-drop-image" id="sticker-preview-image" />
             </div>
-            <p class="drop-label">First Drop</p>
             <h3>Bohemian Life Transfer Sticker</h3>
             <p>9&quot; × 2.5&quot; die-cut vinyl transfer decal featuring the Bohemian Life lotus logo. Perfect for laptops, water bottles, windows, or notebooks.</p>
+            <p class="color-options-label">Available colors</p>
+            <div class="sticker-color-options" role="group" aria-label="Sticker color options">
+              <button type="button" class="sticker-color-option is-selected" data-sticker-image="images/BLgreen.png">Green</button>
+              <button type="button" class="sticker-color-option" data-sticker-image="images/BLwhite.png">White</button>
+            </div>
           </article>
 
           <article class="card">
@@ -148,5 +152,26 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const previewImage = document.getElementById("sticker-preview-image");
+      const colorButtons = document.querySelectorAll(".sticker-color-option");
+
+      colorButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const nextImage = button.dataset.stickerImage;
+          if (!nextImage || !previewImage) {
+            return;
+          }
+
+          previewImage.src = nextImage;
+
+          colorButtons.forEach((option) => option.classList.remove("is-selected"));
+          button.classList.add("is-selected");
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
