@@ -298,6 +298,13 @@ a {
   margin: 0;
 }
 
+.about-text h2 {
+  font-family: "Poppins", "Inter", "Montserrat", Arial, sans-serif;
+  font-size: clamp(1.8rem, 2.2vw, 2.45rem);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 .about-logo {
   width: min(100%, 220px);
   margin: 0 auto;
@@ -372,5 +379,9 @@ a {
 
   .section {
     padding: 4rem 0;
+  }
+
+  .about-text h2 {
+    white-space: normal;
   }
 }
