@@ -283,6 +283,14 @@ a {
 .about-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
   gap: 0.9rem;
 }
 
@@ -291,8 +299,8 @@ a {
 }
 
 .about-logo {
-  width: min(100%, 260px);
-  margin: 0.75rem auto 0;
+  width: min(100%, 220px);
+  margin: 0 auto;
 }
 
 .shop-preview {
@@ -325,6 +333,14 @@ a {
   .about-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    height: auto;
+  }
+
+  .about-logo {
+    margin-top: 1rem;
   }
 
   .hero {
