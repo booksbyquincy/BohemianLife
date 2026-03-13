@@ -530,14 +530,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 .footer-grid {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.7rem;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .footer-contact-item {
@@ -546,11 +548,12 @@ a {
   align-items: center;
   gap: 0.55rem;
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .footer-contact-item i {
   color: var(--turquoise);
-  font-size: 1.05rem;
+  font-size: 0.88rem;
 }
 
 .footer-link {
@@ -567,7 +570,7 @@ a {
 .footer-copyright {
   margin: 0;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   opacity: 0.9;
 }
 
