@@ -85,7 +85,7 @@ a {
     radial-gradient(circle at top left, rgba(240, 196, 90, 0.14), transparent 30%),
     linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
   color: var(--white);
-  padding: clamp(2.6rem, 6.1vw, 3.5rem) 0 clamp(1.55rem, 3.3vw, 2.15rem);
+  padding: clamp(1.25rem, 3.2vw, 2rem) 0 clamp(0.9rem, 2.1vw, 1.35rem);
 }
 
 .hero-content {
@@ -95,14 +95,14 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: clamp(0.38rem, 1.3vw, 0.8rem);
+  gap: clamp(0.18rem, 0.75vw, 0.4rem);
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.78rem;
+  gap: 0.6rem;
 }
 
 .eyebrow {
@@ -172,7 +172,7 @@ a {
 .hero-logo {
   width: auto;
   max-width: min(96vw, 760px);
-  max-height: clamp(320px, 70vh, 580px);
+  max-height: clamp(260px, 56vh, 460px);
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -446,7 +446,7 @@ a {
   }
 
   .hero {
-    padding: 2.3rem 0 1.9rem;
+    padding: 1.1rem 0 0.95rem;
   }
 }
 
@@ -467,7 +467,7 @@ a {
 
   .hero-logo {
     max-width: min(97vw, 620px);
-    max-height: clamp(260px, 62vh, 460px);
+    max-height: clamp(220px, 48vh, 360px);
   }
 
   .section {
