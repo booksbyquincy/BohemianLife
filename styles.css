@@ -529,13 +529,28 @@ a {
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.footer-contact-item {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 500;
+}
+
+.footer-contact-item i {
+  color: var(--turquoise);
+  font-size: 1.05rem;
 }
 
 .footer-link {
@@ -558,8 +573,7 @@ a {
 
 @media (max-width: 980px) {
   .card-grid,
-  .about-grid,
-  .footer-grid {
+  .about-grid {
     grid-template-columns: 1fr;
   }
 
