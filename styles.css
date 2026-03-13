@@ -562,6 +562,13 @@ a {
   transition: opacity 0.2s ease;
 }
 
+.footer-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  pointer-events: auto;
+}
+
 .footer-link:hover,
 .footer-link:focus-visible {
   opacity: 0.85;
