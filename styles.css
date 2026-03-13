@@ -50,8 +50,8 @@ a {
   left: 0;
   width: 100%;
   z-index: 50;
-  background: #26b9cf;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: #1f9fb9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .nav {
@@ -69,12 +69,13 @@ a {
 
 .nav-links a {
   color: var(--white);
-  opacity: 0.98;
+  opacity: 0.99;
   font-weight: 600;
+  text-shadow: 0 1px 1px rgba(23, 66, 79, 0.25);
 }
 
 .nav-links a:hover {
-  color: #d8ff69;
+  color: #fef3be;
 }
 
 .hero {
@@ -84,7 +85,7 @@ a {
     radial-gradient(circle at top left, rgba(240, 196, 90, 0.14), transparent 30%),
     linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
   color: var(--white);
-  padding: clamp(4.2rem, 9vw, 5.4rem) 0 clamp(2rem, 4.8vw, 2.8rem);
+  padding: clamp(2.6rem, 6.1vw, 3.5rem) 0 clamp(1.55rem, 3.3vw, 2.15rem);
 }
 
 .hero-content {
@@ -94,14 +95,14 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: clamp(0.8rem, 2.2vw, 1.2rem);
+  gap: clamp(0.38rem, 1.3vw, 0.8rem);
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.78rem;
 }
 
 .eyebrow {
@@ -168,11 +169,12 @@ a {
 
 .hero-logo {
   width: auto;
-  max-width: min(96vw, 700px);
-  max-height: clamp(280px, 64vh, 520px);
+  max-width: min(96vw, 760px);
+  max-height: clamp(320px, 70vh, 580px);
   height: auto;
   object-fit: contain;
   margin: 0 auto;
+  filter: drop-shadow(0 0 26px rgba(240, 196, 90, 0.34)) drop-shadow(0 10px 22px rgba(47, 35, 66, 0.2));
 }
 
 .section {
@@ -442,7 +444,7 @@ a {
   }
 
   .hero {
-    padding: 2.8rem 0 2.2rem;
+    padding: 2.3rem 0 1.9rem;
   }
 }
 
@@ -462,8 +464,8 @@ a {
   }
 
   .hero-logo {
-    max-width: min(96vw, 560px);
-    max-height: clamp(240px, 58vh, 420px);
+    max-width: min(97vw, 620px);
+    max-height: clamp(260px, 62vh, 460px);
   }
 
   .section {
