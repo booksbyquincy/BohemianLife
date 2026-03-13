@@ -98,31 +98,35 @@
       </div>
     </section>
 
-    <section id="shop" class="section shop-preview">
+    <section id="contact" class="section contact-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow eyebrow-purple">Shop</p>
-          <h2>Start simple, then expand</h2>
-          <p>
-            This section can later become product listings, a Shopify link, or a
-            storefront connected to your own domain.
-          </p>
-        </div>
+        <div class="contact-shell">
+          <div class="contact-intro">
+            <p class="eyebrow eyebrow-purple">Contact</p>
+            <h2>Get in Touch with Bohemian Life</h2>
+            <p>
+              We’d love to hear from you. Send a quick message and we’ll get back to you soon.
+            </p>
+          </div>
 
-        <div class="shop-box">
-          <h3>Your shop is coming to life</h3>
-          <p>
-            For now, this homepage gives your brand a strong visual identity.
-            Next we can add product cards, pricing, links, and your actual store
-            structure.
-          </p>
-          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <form id="contact-form" class="contact-form" novalidate>
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer id="contact" class="site-footer">
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <h3>Bohemian Life</h3>
@@ -139,6 +143,7 @@
     (function () {
       const previewImage = document.getElementById("sticker-preview-image");
       const colorButtons = document.querySelectorAll(".sticker-color-option");
+      const contactForm = document.getElementById("contact-form");
 
       colorButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -153,6 +158,28 @@
           button.classList.add("is-selected");
         });
       });
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+          }
+
+          const formData = new FormData(contactForm);
+          const name = (formData.get("name") || "").toString().trim();
+          const email = (formData.get("email") || "").toString().trim();
+          const message = (formData.get("message") || "").toString().trim();
+
+          const subject = encodeURIComponent("New message from Bohemian Life website");
+          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+          window.location.href = `mailto:hello.bohemian.life@gmail.com?subject=${subject}&body=${body}`;
+          contactForm.reset();
+        });
+      }
     })();
   </script>
 </body>
