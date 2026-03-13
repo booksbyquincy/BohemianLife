@@ -149,11 +149,16 @@
     </div>
   </footer>
 
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
   <script>
     (function () {
       const previewImage = document.getElementById("sticker-preview-image");
       const colorButtons = document.querySelectorAll(".sticker-color-option");
       const contactForm = document.getElementById("contact-form");
+      const backToTopButton = document.getElementById("back-to-top");
 
       colorButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -309,6 +314,23 @@
               submitButton.textContent = "Send Message";
             }
           }
+        });
+      }
+
+      if (backToTopButton) {
+        const toggleBackToTopButton = () => {
+          const shouldShowButton = window.scrollY > 300;
+          backToTopButton.classList.toggle("is-visible", shouldShowButton);
+        };
+
+        toggleBackToTopButton();
+        window.addEventListener("scroll", toggleBackToTopButton, { passive: true });
+
+        backToTopButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
         });
       }
     })();
