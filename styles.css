@@ -163,8 +163,12 @@ a {
 }
 
 .hero-logo {
-  width: min(72vw, 320px);
-  max-width: 320px;
+  width: auto;
+  max-width: min(90vw, 520px);
+  max-height: clamp(220px, 62vh, 420px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .section {
