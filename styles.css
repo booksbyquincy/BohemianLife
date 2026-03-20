@@ -321,11 +321,55 @@ a {
   padding: 1rem;
 }
 
+.featured-book-image-link {
+  display: inline-flex;
+  border-radius: 14px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+}
+
+.featured-book-image-link:hover,
+.featured-book-image-link:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(47, 35, 66, 0.2);
+}
+
+.featured-book-image-link:focus-visible {
+  outline: 2px solid rgba(31, 159, 185, 0.65);
+  outline-offset: 4px;
+}
+
 .featured-book-image {
   width: auto;
   height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+.book-buy-button {
+  margin-top: 0.7rem;
+  width: min(100%, 240px);
+  text-align: center;
+}
+
+.book-qr-wrap {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.book-qr-image {
+  width: clamp(116px, 36vw, 158px);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(47, 35, 66, 0.14);
+}
+
+.book-qr-caption {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4f3f6d;
 }
 
 .drop-label {
