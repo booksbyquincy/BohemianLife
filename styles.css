@@ -190,110 +190,107 @@ a {
   isolation: isolate;
 }
 
-.dragonfly {
+
+.hero-ambient {
   position: absolute;
-  width: clamp(18px, 1.6vw, 26px);
-  height: clamp(10px, 0.9vw, 14px);
+  inset: -6% -8%;
   pointer-events: none;
-  opacity: 0.35;
-  filter: blur(0.2px) drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
   z-index: 0;
 }
 
-.dragonfly::before,
-.dragonfly::after {
-  content: "";
+.ambient-haze {
   position: absolute;
+  left: 50%;
   top: 50%;
-  width: 60%;
-  height: 70%;
-  border-radius: 100% 80% 100% 80%;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.15) 70%);
-  transform-origin: center left;
+  width: min(72vw, 640px);
+  height: min(44vw, 360px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 236, 209, 0.16) 0%, rgba(255, 228, 188, 0.08) 35%, rgba(255, 225, 192, 0) 74%);
+  filter: blur(16px);
+  opacity: 0.65;
 }
 
-.dragonfly::before {
-  left: -6%;
-  transform: translateY(-50%) rotate(14deg);
+.ambient-glow {
+  position: absolute;
+  width: clamp(120px, 18vw, 220px);
+  height: clamp(120px, 18vw, 220px);
+  border-radius: 50%;
+  filter: blur(34px);
+  opacity: 0.16;
+  background: radial-gradient(circle, rgba(255, 229, 190, 0.62) 0%, rgba(255, 217, 170, 0.09) 52%, rgba(255, 215, 162, 0) 100%);
 }
 
-.dragonfly::after {
-  right: -6%;
-  transform: translateY(-50%) rotate(-14deg) scaleX(-1);
+.ambient-glow-left {
+  top: 26%;
+  left: 20%;
 }
 
-.dragonfly-top-right {
-  top: 15%;
-  right: 15%;
-  opacity: 0.5;
-  animation: dragonfly-drift 8s ease-in-out infinite;
-}
-
-.dragonfly-left {
-  top: 57%;
-  left: 12%;
-  opacity: 0.36;
-  animation: dragonfly-horizontal 10s ease-in-out infinite;
-}
-
-.dragonfly-bottom-right {
-  top: 74%;
+.ambient-glow-right {
   right: 18%;
-  opacity: 0.23;
-  animation: dragonfly-orbit 12s ease-in-out infinite;
+  bottom: 20%;
+  opacity: 0.12;
 }
 
-.dragonfly-top {
-  top: 8%;
-  left: 49%;
-  opacity: 0.2;
-  animation: dragonfly-fade-drift 9s ease-in-out infinite;
+.firefly {
+  --size: 8px;
+  --top: 50%;
+  --left: 50%;
+  --travel-x: 8px;
+  --travel-y: -10px;
+  --drift-duration: 10s;
+  --pulse-duration: 6s;
+  --delay: 0s;
+  --glow-core: rgba(255, 241, 220, 0.68);
+  --glow-mid: rgba(247, 222, 180, 0.32);
+  --glow-edge: rgba(246, 212, 162, 0);
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-core) 0%, var(--glow-mid) 34%, var(--glow-edge) 100%);
+  filter: blur(0.35px);
+  opacity: 0.3;
+  transform: translate3d(0, 0, 0);
+  animation:
+    firefly-drift var(--drift-duration) ease-in-out infinite var(--delay),
+    firefly-pulse var(--pulse-duration) ease-in-out infinite var(--delay);
 }
 
-@keyframes dragonfly-drift {
+.firefly-1 { --top: 16%; --left: 24%; --size: 5px; --travel-x: 7px; --travel-y: -9px; --drift-duration: 11s; --pulse-duration: 5.4s; --delay: -1.2s; opacity: 0.22; }
+.firefly-2 { --top: 22%; --left: 42%; --size: 7px; --travel-x: -6px; --travel-y: -10px; --drift-duration: 12.8s; --pulse-duration: 7.6s; --delay: -3.8s; opacity: 0.26; }
+.firefly-3 { --top: 18%; --left: 66%; --size: 6px; --travel-x: 8px; --travel-y: -6px; --drift-duration: 8.6s; --pulse-duration: 4.9s; --delay: -0.8s; opacity: 0.24; }
+.firefly-4 { --top: 35%; --left: 18%; --size: 6px; --travel-x: 9px; --travel-y: -8px; --drift-duration: 13.6s; --pulse-duration: 6.4s; --delay: -5.1s; opacity: 0.2; }
+.firefly-5 { --top: 40%; --left: 31%; --size: 9px; --travel-x: -7px; --travel-y: -12px; --drift-duration: 9.7s; --pulse-duration: 5.8s; --delay: -2.2s; opacity: 0.3; }
+.firefly-6 { --top: 33%; --left: 54%; --size: 8px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.9s; --pulse-duration: 6.9s; --delay: -4.6s; opacity: 0.34; }
+.firefly-7 { --top: 44%; --left: 72%; --size: 6px; --travel-x: -8px; --travel-y: -10px; --drift-duration: 12.1s; --pulse-duration: 7.3s; --delay: -1.7s; opacity: 0.26; }
+.firefly-8 { --top: 57%; --left: 21%; --size: 5px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 7.9s; --pulse-duration: 4.8s; --delay: -2.9s; opacity: 0.18; }
+.firefly-9 { --top: 58%; --left: 44%; --size: 8px; --travel-x: -9px; --travel-y: -11px; --drift-duration: 13.2s; --pulse-duration: 7.1s; --delay: -6.2s; opacity: 0.29; }
+.firefly-10 { --top: 55%; --left: 60%; --size: 7px; --travel-x: 7px; --travel-y: -7px; --drift-duration: 9.1s; --pulse-duration: 5.2s; --delay: -1.4s; opacity: 0.24; }
+.firefly-11 { --top: 62%; --left: 75%; --size: 6px; --travel-x: -7px; --travel-y: -10px; --drift-duration: 14s; --pulse-duration: 7.8s; --delay: -4.3s; opacity: 0.22; }
+.firefly-12 { --top: 72%; --left: 52%; --size: 5px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.4s; --pulse-duration: 6.2s; --delay: -3.2s; opacity: 0.18; }
+.firefly-13 { --top: 68%; --left: 30%; --size: 7px; --travel-x: -8px; --travel-y: -7px; --drift-duration: 11.7s; --pulse-duration: 5.5s; --delay: -7.1s; opacity: 0.24; }
+.firefly-14 { --top: 24%; --left: 80%; --size: 5px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 8.8s; --pulse-duration: 5.1s; --delay: -0.5s; opacity: 0.2; }
+
+@keyframes firefly-drift {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate(8px, -6px);
+    transform: translate3d(var(--travel-x), var(--travel-y), 0);
   }
 }
 
-@keyframes dragonfly-horizontal {
+@keyframes firefly-pulse {
   0%,
   100% {
-    transform: translateX(0);
+    opacity: clamp(0.12, calc(var(--size) / 40), 0.36);
   }
   50% {
-    transform: translateX(10px);
-  }
-}
-
-@keyframes dragonfly-orbit {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(4px, 4px);
-  }
-  75% {
-    transform: translate(-3px, -2px);
-  }
-}
-
-@keyframes dragonfly-fade-drift {
-  0%,
-  100% {
-    opacity: 0;
-    transform: translateY(2px);
-  }
-  35%,
-  65% {
-    opacity: 0.2;
-    transform: translateY(-4px);
+    opacity: clamp(0.24, calc(var(--size) / 24), 0.58);
   }
 }
 
@@ -851,19 +848,29 @@ a {
     max-height: clamp(220px, 48vh, 360px);
   }
 
-  .dragonfly-top,
-  .dragonfly-bottom-right {
+  .hero-ambient {
+    inset: -8% -10%;
+  }
+
+  .ambient-haze {
+    width: min(94vw, 480px);
+    height: min(64vw, 300px);
+    opacity: 0.55;
+  }
+
+  .ambient-glow {
+    opacity: 0.11;
+  }
+
+  .mobile-hidden,
+  .firefly-9,
+  .firefly-11,
+  .firefly-12 {
     display: none;
   }
 
-  .dragonfly-top-right {
-    top: 17%;
-    right: 11%;
-  }
-
-  .dragonfly-left {
-    left: 9%;
-    top: 60%;
+  .firefly {
+    filter: blur(0.45px);
   }
 
   .section {
@@ -893,11 +900,17 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dragonfly {
+  .firefly {
     animation: none;
+    transform: none;
+    opacity: 0.18;
   }
 
-  .dragonfly-top {
-    opacity: 0.12;
+  .ambient-haze {
+    opacity: 0.5;
+  }
+
+  .ambient-glow {
+    opacity: 0.1;
   }
 }
