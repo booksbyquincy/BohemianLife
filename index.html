@@ -33,7 +33,6 @@
         <div class="hero-text">
           <h1>Walk Your Own Path</h1>
           <div class="hero-buttons">
-            <a href="https://bohemian-life.square.site/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Shop the Collection</a>
             <a href="#about" class="btn btn-secondary">Our Story</a>
           </div>
         </div>
@@ -59,9 +58,37 @@
             <p>9&quot; × 2.5&quot; die-cut vinyl transfer decal featuring the Bohemian Life lotus logo. Perfect for laptops, water bottles, windows, or notebooks.</p>
             <p class="color-options-label">Available colors</p>
             <div class="sticker-color-options" role="group" aria-label="Sticker color options">
-              <button type="button" class="sticker-color-option is-selected" data-sticker-image="images/BLgreen.png">Green</button>
-              <button type="button" class="sticker-color-option" data-sticker-image="images/BLwhite.png">White</button>
+              <button
+                type="button"
+                class="sticker-color-option is-selected"
+                data-sticker-image="images/BLgreen.png"
+                data-sticker-buy-url="https://bohemian-life.square.site/product/bohemian-life-signature-logo-decal-green/331"
+                data-sticker-color="green"
+                aria-pressed="true"
+              >
+                Green
+              </button>
+              <button
+                type="button"
+                class="sticker-color-option"
+                data-sticker-image="images/BLwhite.png"
+                data-sticker-buy-url="https://bohemian-life.square.site/product/bohemian-life-signature-vinyl-decal-white/332"
+                data-sticker-color="white"
+                aria-pressed="false"
+              >
+                White
+              </button>
             </div>
+            <a
+              href="https://bohemian-life.square.site/product/bohemian-life-signature-logo-decal-green/331"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary sticker-buy-button"
+              id="sticker-buy-button"
+              aria-label="Buy Green transfer sticker"
+            >
+              Buy Green
+            </a>
           </article>
 
           <article class="card featured-book-card">
@@ -169,6 +196,8 @@
   <script>
     (function () {
       const previewImage = document.getElementById("sticker-preview-image");
+      const previewFrame = document.querySelector(".featured-drop-media");
+      const stickerBuyButton = document.getElementById("sticker-buy-button");
       const colorButtons = document.querySelectorAll(".sticker-color-option");
       const contactForm = document.getElementById("contact-form");
       const backToTopButton = document.getElementById("back-to-top");
@@ -176,14 +205,32 @@
       colorButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const nextImage = button.dataset.stickerImage;
+          const nextBuyUrl = button.dataset.stickerBuyUrl;
+          const selectedColor = button.dataset.stickerColor;
+
           if (!nextImage || !previewImage) {
             return;
           }
 
           previewImage.src = nextImage;
 
-          colorButtons.forEach((option) => option.classList.remove("is-selected"));
+          colorButtons.forEach((option) => {
+            option.classList.remove("is-selected");
+            option.setAttribute("aria-pressed", "false");
+          });
           button.classList.add("is-selected");
+          button.setAttribute("aria-pressed", "true");
+
+          if (previewFrame) {
+            previewFrame.classList.toggle("is-white-preview", selectedColor === "white");
+          }
+
+          if (stickerBuyButton && nextBuyUrl && selectedColor) {
+            const formattedColor = selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1);
+            stickerBuyButton.href = nextBuyUrl;
+            stickerBuyButton.textContent = `Buy ${formattedColor}`;
+            stickerBuyButton.setAttribute("aria-label", `Buy ${formattedColor} transfer sticker`);
+          }
         });
       });
 
