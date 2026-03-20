@@ -63,7 +63,7 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 1.45rem;
+  gap: clamp(1.2rem, 2.3vw, 2rem);
   flex-wrap: wrap;
 }
 
@@ -631,6 +631,12 @@ a {
   align-items: center;
   gap: 0.55rem;
   pointer-events: auto;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
 }
 
 .footer-link:hover,
