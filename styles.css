@@ -82,10 +82,9 @@ a {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(130% 92% at 50% 46%, rgba(255, 214, 132, 0.17) 0%, rgba(246, 190, 94, 0.11) 26%, rgba(174, 121, 205, 0.08) 54%, rgba(80, 54, 131, 0) 82%),
-    radial-gradient(85% 58% at 50% 82%, rgba(87, 59, 145, 0.25) 0%, rgba(87, 59, 145, 0) 100%),
-    radial-gradient(circle at top left, rgba(240, 196, 90, 0.12), transparent 36%),
-    linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+    radial-gradient(120% 78% at 50% 105%, rgba(84, 58, 136, 0.32) 0%, rgba(84, 58, 136, 0) 72%),
+    radial-gradient(95% 62% at 8% 0%, rgba(142, 107, 201, 0.14) 0%, rgba(142, 107, 201, 0) 70%),
+    linear-gradient(145deg, #4f2f84 0%, #3f266f 48%, #2f1d57 100%);
   color: var(--white);
   padding: clamp(1rem, 2.8vw, 1.6rem) 0 clamp(0.72rem, 1.9vw, 1.1rem);
 }
@@ -174,14 +173,14 @@ a {
 
 .hero-logo {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: auto;
   max-width: min(96vw, 912px);
   max-height: clamp(312px, 56vh, 552px);
   height: auto;
   object-fit: contain;
   margin: 0 auto;
-  filter: drop-shadow(0 0 26px rgba(240, 196, 90, 0.34)) drop-shadow(0 10px 22px rgba(47, 35, 66, 0.2));
+  filter: drop-shadow(0 6px 16px rgba(23, 14, 44, 0.28));
 }
 
 .hero-logo-wrap {
@@ -201,51 +200,33 @@ a {
 }
 
 .ambient-core-glow {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  width: min(122vw, 1080px);
-  height: min(62vw, 540px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(255, 224, 166, 0.28) 0%, rgba(246, 191, 106, 0.16) 32%, rgba(154, 109, 191, 0.09) 62%, rgba(94, 63, 146, 0) 86%);
-  filter: blur(20px);
-  opacity: 0.88;
+  display: none;
 }
 
 .ambient-texture {
   position: absolute;
-  inset: 8% 12% 10%;
+  inset: 14% 16% 18%;
   border-radius: 42% 56% 48% 51%;
   background:
-    radial-gradient(170% 130% at 25% 18%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 66%),
-    radial-gradient(150% 120% at 78% 70%, rgba(255, 236, 209, 0.045) 0%, rgba(255, 236, 209, 0) 63%);
+    radial-gradient(120% 92% at 18% 14%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 62%),
+    radial-gradient(120% 108% at 82% 76%, rgba(171, 143, 222, 0.05) 0%, rgba(171, 143, 222, 0) 70%);
   mix-blend-mode: screen;
-  filter: blur(12px);
-  opacity: 0.35;
+  filter: blur(8px);
+  opacity: 0.24;
 }
 
 .ambient-haze {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(96vw, 860px);
-  height: min(52vw, 460px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(255, 236, 209, 0.15) 0%, rgba(255, 228, 188, 0.09) 38%, rgba(255, 225, 192, 0) 76%);
-  filter: blur(20px);
-  opacity: 0.72;
+  display: none;
 }
 
 .ambient-glow {
   position: absolute;
-  width: clamp(120px, 18vw, 220px);
-  height: clamp(120px, 18vw, 220px);
+  width: clamp(100px, 12vw, 160px);
+  height: clamp(100px, 12vw, 160px);
   border-radius: 50%;
-  filter: blur(34px);
-  opacity: 0.16;
-  background: radial-gradient(circle, rgba(255, 229, 190, 0.62) 0%, rgba(255, 217, 170, 0.09) 52%, rgba(255, 215, 162, 0) 100%);
+  filter: blur(24px);
+  opacity: 0.08;
+  background: radial-gradient(circle, rgba(177, 143, 230, 0.28) 0%, rgba(177, 143, 230, 0) 74%);
 }
 
 .ambient-glow-left {
@@ -260,7 +241,7 @@ a {
 }
 
 .firefly {
-  --size: 8px;
+  --size: 4px;
   --top: 50%;
   --left: 50%;
   --travel-x: 8px;
@@ -268,10 +249,10 @@ a {
   --drift-duration: 10s;
   --pulse-duration: 6s;
   --delay: 0s;
-  --glow-core: rgba(255, 241, 220, 0.68);
-  --glow-mid: rgba(247, 222, 180, 0.32);
+  --glow-core: rgba(255, 241, 220, 0.78);
+  --glow-mid: rgba(247, 222, 180, 0.18);
   --glow-edge: rgba(246, 212, 162, 0);
-  --blur: 0.4px;
+  --blur: 0px;
   position: absolute;
   top: var(--top);
   left: var(--left);
@@ -280,27 +261,27 @@ a {
   border-radius: 50%;
   background: radial-gradient(circle, var(--glow-core) 0%, var(--glow-mid) 34%, var(--glow-edge) 100%);
   filter: blur(var(--blur));
-  opacity: 0.3;
+  opacity: 0.2;
   transform: translate3d(0, 0, 0);
   animation:
     firefly-drift var(--drift-duration) ease-in-out infinite var(--delay),
     firefly-pulse var(--pulse-duration) ease-in-out infinite var(--delay);
 }
 
-.firefly-1 { --top: 16%; --left: 24%; --size: 5px; --travel-x: 7px; --travel-y: -9px; --drift-duration: 11s; --pulse-duration: 5.4s; --delay: -1.2s; opacity: 0.22; }
-.firefly-2 { --top: 22%; --left: 42%; --size: 7px; --travel-x: -6px; --travel-y: -10px; --drift-duration: 12.8s; --pulse-duration: 7.6s; --delay: -3.8s; opacity: 0.26; }
-.firefly-3 { --top: 18%; --left: 66%; --size: 6px; --travel-x: 8px; --travel-y: -6px; --drift-duration: 8.6s; --pulse-duration: 4.9s; --delay: -0.8s; opacity: 0.24; }
-.firefly-4 { --top: 35%; --left: 18%; --size: 6px; --travel-x: 9px; --travel-y: -8px; --drift-duration: 13.6s; --pulse-duration: 6.4s; --delay: -5.1s; opacity: 0.2; }
-.firefly-5 { --top: 40%; --left: 31%; --size: 9px; --travel-x: -7px; --travel-y: -12px; --drift-duration: 9.7s; --pulse-duration: 5.8s; --delay: -2.2s; opacity: 0.3; }
-.firefly-6 { --top: 33%; --left: 54%; --size: 8px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.9s; --pulse-duration: 6.9s; --delay: -4.6s; opacity: 0.34; }
-.firefly-7 { --top: 44%; --left: 72%; --size: 6px; --travel-x: -8px; --travel-y: -10px; --drift-duration: 12.1s; --pulse-duration: 7.3s; --delay: -1.7s; opacity: 0.26; }
-.firefly-8 { --top: 57%; --left: 21%; --size: 5px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 7.9s; --pulse-duration: 4.8s; --delay: -2.9s; opacity: 0.18; }
-.firefly-9 { --top: 58%; --left: 44%; --size: 8px; --travel-x: -9px; --travel-y: -11px; --drift-duration: 13.2s; --pulse-duration: 7.1s; --delay: -6.2s; opacity: 0.29; }
-.firefly-10 { --top: 55%; --left: 60%; --size: 7px; --travel-x: 7px; --travel-y: -7px; --drift-duration: 9.1s; --pulse-duration: 5.2s; --delay: -1.4s; opacity: 0.24; }
-.firefly-11 { --top: 62%; --left: 75%; --size: 6px; --travel-x: -7px; --travel-y: -10px; --drift-duration: 14s; --pulse-duration: 7.8s; --delay: -4.3s; opacity: 0.22; }
-.firefly-12 { --top: 72%; --left: 52%; --size: 5px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.4s; --pulse-duration: 6.2s; --delay: -3.2s; opacity: 0.18; }
-.firefly-13 { --top: 68%; --left: 30%; --size: 7px; --travel-x: -8px; --travel-y: -7px; --drift-duration: 11.7s; --pulse-duration: 5.5s; --delay: -7.1s; opacity: 0.24; }
-.firefly-14 { --top: 24%; --left: 80%; --size: 5px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 8.8s; --pulse-duration: 5.1s; --delay: -0.5s; opacity: 0.2; }
+.firefly-1 { --top: 16%; --left: 24%; --size: 4px; --travel-x: 7px; --travel-y: -9px; --drift-duration: 11s; --pulse-duration: 5.4s; --delay: -1.2s; opacity: 0.18; }
+.firefly-2 { --top: 22%; --left: 42%; --size: 5px; --travel-x: -6px; --travel-y: -10px; --drift-duration: 12.8s; --pulse-duration: 7.6s; --delay: -3.8s; opacity: 0.2; }
+.firefly-3 { --top: 18%; --left: 66%; --size: 4px; --travel-x: 8px; --travel-y: -6px; --drift-duration: 8.6s; --pulse-duration: 4.9s; --delay: -0.8s; opacity: 0.18; }
+.firefly-4 { --top: 35%; --left: 18%; --size: 4px; --travel-x: 9px; --travel-y: -8px; --drift-duration: 13.6s; --pulse-duration: 6.4s; --delay: -5.1s; opacity: 0.16; }
+.firefly-5 { --top: 40%; --left: 31%; --size: 4px; --travel-x: -7px; --travel-y: -12px; --drift-duration: 9.7s; --pulse-duration: 5.8s; --delay: -2.2s; opacity: 0.2; }
+.firefly-6 { --top: 33%; --left: 54%; --size: 4px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.9s; --pulse-duration: 6.9s; --delay: -4.6s; opacity: 0.22; }
+.firefly-7 { --top: 44%; --left: 72%; --size: 4px; --travel-x: -8px; --travel-y: -10px; --drift-duration: 12.1s; --pulse-duration: 7.3s; --delay: -1.7s; opacity: 0.18; }
+.firefly-8 { --top: 57%; --left: 21%; --size: 4px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 7.9s; --pulse-duration: 4.8s; --delay: -2.9s; opacity: 0.14; }
+.firefly-9 { --top: 58%; --left: 44%; --size: 4px; --travel-x: -9px; --travel-y: -11px; --drift-duration: 13.2s; --pulse-duration: 7.1s; --delay: -6.2s; opacity: 0.19; }
+.firefly-10 { --top: 55%; --left: 60%; --size: 4px; --travel-x: 7px; --travel-y: -7px; --drift-duration: 9.1s; --pulse-duration: 5.2s; --delay: -1.4s; opacity: 0.18; }
+.firefly-11 { --top: 62%; --left: 75%; --size: 4px; --travel-x: -7px; --travel-y: -10px; --drift-duration: 14s; --pulse-duration: 7.8s; --delay: -4.3s; opacity: 0.16; }
+.firefly-12 { --top: 72%; --left: 52%; --size: 4px; --travel-x: 8px; --travel-y: -9px; --drift-duration: 10.4s; --pulse-duration: 6.2s; --delay: -3.2s; opacity: 0.14; }
+.firefly-13 { --top: 68%; --left: 30%; --size: 5px; --travel-x: -8px; --travel-y: -7px; --drift-duration: 11.7s; --pulse-duration: 5.5s; --delay: -7.1s; opacity: 0.18; }
+.firefly-14 { --top: 24%; --left: 80%; --size: 4px; --travel-x: 6px; --travel-y: -8px; --drift-duration: 8.8s; --pulse-duration: 5.1s; --delay: -0.5s; opacity: 0.15; }
 .firefly-15 { --top: 13%; --left: 8%; --size: 3px; --travel-x: 6px; --travel-y: -6px; --drift-duration: 16.2s; --pulse-duration: 8.2s; --delay: -3.7s; --blur: 0.7px; opacity: 0.12; }
 .firefly-16 { --top: 26%; --left: 11%; --size: 4px; --travel-x: -5px; --travel-y: -7px; --drift-duration: 14.3s; --pulse-duration: 7.6s; --delay: -5.4s; --blur: 0.62px; opacity: 0.14; }
 .firefly-17 { --top: 9%; --left: 36%; --size: 4px; --travel-x: 4px; --travel-y: -5px; --drift-duration: 13.8s; --pulse-duration: 8.4s; --delay: -4.7s; --blur: 0.65px; opacity: 0.15; }
@@ -308,9 +289,9 @@ a {
 .firefly-19 { --top: 69%; --left: 88%; --size: 3px; --travel-x: -4px; --travel-y: -6px; --drift-duration: 17.2s; --pulse-duration: 8.8s; --delay: -6.1s; --blur: 0.8px; opacity: 0.1; }
 .firefly-20 { --top: 78%; --left: 16%; --size: 4px; --travel-x: 5px; --travel-y: -5px; --drift-duration: 15.6s; --pulse-duration: 8.1s; --delay: -7.3s; --blur: 0.7px; opacity: 0.13; }
 .firefly-21 { --top: 83%; --left: 64%; --size: 3px; --travel-x: -5px; --travel-y: -4px; --drift-duration: 16.8s; --pulse-duration: 9s; --delay: -1.9s; --blur: 0.82px; opacity: 0.1; }
-.firefly-22 { --top: 47%; --left: 6%; --size: 5px; --travel-x: 7px; --travel-y: -8px; --drift-duration: 11.5s; --pulse-duration: 6.6s; --delay: -3.4s; --blur: 0.55px; opacity: 0.17; }
-.firefly-23 { --top: 52%; --left: 92%; --size: 5px; --travel-x: -7px; --travel-y: -7px; --drift-duration: 12.9s; --pulse-duration: 6.8s; --delay: -0.9s; --blur: 0.55px; opacity: 0.16; }
-.firefly-24 { --top: 16%; --left: 57%; --size: 10px; --travel-x: 5px; --travel-y: -9px; --drift-duration: 10.6s; --pulse-duration: 6.3s; --delay: -5.8s; --blur: 0.25px; opacity: 0.34; }
+.firefly-22 { --top: 47%; --left: 6%; --size: 4px; --travel-x: 7px; --travel-y: -8px; --drift-duration: 11.5s; --pulse-duration: 6.6s; --delay: -3.4s; --blur: 0px; opacity: 0.14; }
+.firefly-23 { --top: 52%; --left: 92%; --size: 4px; --travel-x: -7px; --travel-y: -7px; --drift-duration: 12.9s; --pulse-duration: 6.8s; --delay: -0.9s; --blur: 0px; opacity: 0.14; }
+.firefly-24 { --top: 16%; --left: 57%; --size: 4px; --travel-x: 5px; --travel-y: -9px; --drift-duration: 10.6s; --pulse-duration: 6.3s; --delay: -5.8s; --blur: 0px; opacity: 0.2; }
 
 @keyframes firefly-drift {
   0%,
@@ -325,10 +306,10 @@ a {
 @keyframes firefly-pulse {
   0%,
   100% {
-    opacity: clamp(0.12, calc(var(--size) / 40), 0.36);
+    opacity: clamp(0.08, calc(var(--size) / 52), 0.24);
   }
   50% {
-    opacity: clamp(0.24, calc(var(--size) / 24), 0.58);
+    opacity: clamp(0.16, calc(var(--size) / 30), 0.34);
   }
 }
 
