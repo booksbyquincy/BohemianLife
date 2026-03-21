@@ -71,11 +71,29 @@ a {
   color: var(--white);
   opacity: 0.99;
   font-weight: 600;
+  padding: 0.2rem 0;
   text-shadow: 0 1px 1px rgba(23, 66, 79, 0.25);
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .nav-links a:hover {
   color: #fef3be;
+}
+
+.nav-links .nav-shop-link {
+  padding: 0.42rem 0.86rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(106, 76, 163, 0.24);
+  box-shadow: 0 4px 12px rgba(35, 116, 135, 0.2);
+}
+
+.nav-links .nav-shop-link:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(80, 54, 131, 0.36);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(30, 93, 108, 0.3);
 }
 
 .hero {
@@ -847,6 +865,10 @@ a {
   .nav-links {
     justify-content: center;
     gap: 0.9rem;
+  }
+
+  .nav-links .nav-shop-link {
+    padding: 0.42rem 0.78rem;
   }
 
   .hero h1 {
